@@ -1,0 +1,19 @@
+{
+  "fitbit": {
+    "appUUID": "0df19cb5-6172-4b48-b031-eb2b1a190f35",
+    "appType": "clockface",
+    "appDisplayName": "fbt",
+    "iconFile": "resources/icon.png",
+    "wipeColor": "",
+    "requestedPermissions": [],
+    "buildTargets": [
+      "higgs",
+      "meson"
+    ],
+    "i18n": {
+      "en": {
+        "name": "fbt"
+      }
+    }
+  }
+}
