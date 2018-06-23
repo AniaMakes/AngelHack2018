@@ -10,7 +10,9 @@ import { vibration } from "haptics";
 //clock.granularity = "minutes";
 
 // Get a handle on the <text> element
-const button = document.getElementById("mybutton");
+
+const mybutton = document.getElementById("mybutton");
+
 
 // Update the <text> element every tick with the current time
 // clock.ontick = (evt) => {
@@ -38,10 +40,13 @@ function toggle(){
   console.log(toggle);
   if (runBeat){
     runBeat = false;
+    mybutton.text = "Click Me!";
+
   }
   else{
     runBeat = true;
     generateBeats(500);
+    
   }
 }
 
@@ -50,6 +55,7 @@ function generateBeats(delay) {
   if (runBeat) {
       console.log("beat");
       vibration.start("bump");
+     mybutton.text = "Clicked";
 
         setTimeout(function () {
       generateBeats(delay);
@@ -58,7 +64,6 @@ function generateBeats(delay) {
   }
 }
 
-let mybutton = document.getElementById("mybutton");
 mybutton.onactivate = function(evt) {
   console.log("CLICKED!");
   toggle();
