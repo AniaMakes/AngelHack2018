@@ -1,10 +1,10 @@
 {
   "fitbit": {
     "appUUID": "0df19cb5-6172-4b48-b031-eb2b1a190f35",
-    "appType": "clockface",
+    "appType": "app",
     "appDisplayName": "fbt",
     "iconFile": "resources/icon.png",
-    "wipeColor": "",
+    "wipeColor": "#009688",
     "requestedPermissions": [],
     "buildTargets": [
       "higgs",

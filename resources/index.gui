@@ -1,8 +1,44 @@
 <svg>
-  <use id="mybutton" href="#push-button" y="50" height="60"
-    fill="fb-red" font-family="System-Regular" font-size="40">
-    <set href="#text" attributeName="text-buffer" to="Click Me!" />
-    <set href="#text" attributeName="fill" to="fb-peach" />
-    <set href="#text" attributeName="y" to="12" />
-  </use>
+   <use id="container" href="#panoramaview">
+    <use id="item1" href="#panoramaview-item">
+      <svg>
+      <use id="primary-button" href="#square-button" y="5" fill="fb-red">
+        <set href="#text" attributeName="text-buffer" to="Start" />
+      </use>
+      <text id="content" fill="red" font-family="System-Regular">BPM: 100</text>
+
+      <!-- Left button -->
+      <use id="voldown" class="dialog-half-button-left" href="#square-button-neutral">
+        <set href="#text" attributeName="text-buffer" to="-" />
+        <set href="#text" attributeName="text-anchor" to="middle" />
+      </use>
+
+      <!-- Right button -->
+      <use id="volup" class="dialog-half-button-right" href="#square-button-negative">
+        <set href="#text" attributeName="text-buffer" to="+" />
+        <set href="#text" attributeName="text-anchor" to="middle" />
+      </use>
+      </svg>
+    </use>
+    <use id="item2" href="#panoramaview-item">
+      <svg>
+       <use id="music-button" href="#square-button" y="5" fill="fb-red">
+        <set href="#text" attributeName="text-buffer" to="Waltz" />
+      </use>
+        <use id="music-button-2" href="#square-button" y="$" fill="fb-red">
+        <set href="#text" attributeName="text-buffer" to="Cha Cha" />
+      </use>
+      </svg>
+    </use>
+     <!-- Have enough pagination dots for your slides (extras are hidden) -->
+    <use id="pagination-dots" href="#pagination-widget" y="8">
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-dot" />
+      <use href="#pagination-highlight-dot" />
+    </use>
+        </use>
+
 </svg>
