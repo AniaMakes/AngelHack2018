@@ -5,6 +5,10 @@ import * as util from "../common/utils";
 import { vibration } from "haptics";
 import document from "document";
 
+import { display } from "display";
+display.autoOff = false;
+display.on = true;
+
 const mybutton = document.getElementById("primary-button");
 const musicButton = document.getElementById("music-button");
 const chaChaButton = document.getElementById("music-button-2");
@@ -29,7 +33,7 @@ function generateBeats() {
       vibration.start("bump");
       evaluateText();
       setTimeout(function () {   generateBeats();},  BpmToMs(bpm));
-    
+
   }
 }
 
@@ -55,7 +59,7 @@ function waltz(callback) {
 },
 BpmToMs(100))
 }
-   
+
 function chacha(callback) {
 	setTimeout(function() {
 		setTimeout(function() {
@@ -67,7 +71,7 @@ function chacha(callback) {
 						console.log(4);
                                 if(runMusic == false){ chaChaButton.text = "Cha Cha"}
 
-  
+
 						callback()
 
 					}, BpmToMs(120))
@@ -114,7 +118,7 @@ musicButton.onactivate = function(evt) {
   console.log(musicButton.text);
   runMusic = runMusic == true ? false : true;
   generateWaltz();
- 
+
 }
 
 
@@ -170,4 +174,3 @@ voldownbtn.onactivate = function(evt) {
   bpm -= increment;
   content.text = `BPM: ${bpm}`;
 }
-
